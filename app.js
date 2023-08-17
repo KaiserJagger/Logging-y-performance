@@ -4,6 +4,8 @@ import mongoose from "mongoose";
 import session from "express-session";
 import cookieParser from "cookie-parser";
 import passport from "passport";
+import swaggerJSDoc from 'swagger-jsdoc';
+import swaggerUiExpress  from 'swagger-ui-express'
 
 import { Server } from "socket.io";
 
@@ -41,6 +43,22 @@ app.use(
         saveUninitialized: true,
     }),
 );
+
+// Configuracion de Swagger
+const swaggerOptions = {
+    definition: {
+        openapi:'3.1.0',
+        info:{
+            title:"JaggerStore- Documentation",
+            description: "Administracion de API de ecommerce (productos y carritos)"
+        }
+    },
+    apis: ['./src/docs/products/products.yaml','./src/docs/carts/carts.yaml' ]
+}
+
+const specs = swaggerJSDoc(swaggerOptions)
+app.use('/docs', swaggerUiExpress.serve, swaggerUiExpress.setup(specs))
+
 
 initializePassport();
 app.use(passport.initialize());

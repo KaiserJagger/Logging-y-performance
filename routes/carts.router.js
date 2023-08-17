@@ -3,6 +3,16 @@ import cartController from "../controllers/cart.controller.js";
 
 const router = Router();
 
+/** 
+* @swagger
+* components:
+*   schemas:
+*       cart:
+*           type: object
+*           properties:
+*               
+*/
+
 router.get("/", cartController.getCarts);
 router.get("/:cid", cartController.getCartById);
 router.post("/", cartController.addCart);

@@ -16,9 +16,25 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* Estilos para los filtros */
 .filters {
   margin-bottom: 20px;
+}
+
+/* Estilos para el formulario de filtro */
+.filters label {
+  margin-right: 10px;
+}
+
+.filters select {
+  margin-right: 10px;
+}
+
+.filters button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
 }
 
 .user, .category, .stock {

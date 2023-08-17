@@ -29,11 +29,22 @@
         </div>
     </nav>
 
-    <div class="container">
-        <h2>Productos</h2>
-        <div class="filters row">
-            <!-- Si deseas agregar filtros o categorías, puedes hacerlo aquí -->
-        </div>
+    <div class="category">
+    <a href="products" class="btn btn-link">Todas las categorías</a>
+    <a href="?query=%7B%22category%22%3A%22Laptops%22%7D" class="btn btn-link">Notebooks</a>
+    <a href="?query=%7B%22category%22%3A%22Monitors%22%7D" class="btn btn-link">Monitores</a>
+    <a href="?query=%7B%22category%22%3A%22Keyboards%22%7D" class="btn btn-link">Teclados</a>
+    <a href="?query=%7B%22category%22%3A%22Mice%22%7D" class="btn btn-link">Mouses</a>
+    <a href="?query=%7B%22category%22%3A%22Headphones%22%7D" class="btn btn-link">Auriculares</a>
+    <a href="?query=%7B%22category%22%3A%22Storage%22%7D" class="btn btn-link">Auriculares</a>
+    <a href="?query=%7B%22category%22%3A%22Printers%22%7D" class="btn btn-link">Impresoras</a>
+    <a href="?query=%7B%22category%22%3A%22Tablets%22%7D" class="btn btn-link">Tablets</a>
+    <a href="?query=%7B%22category%22%3A%22Networking%22%7D" class="btn btn-link">Routers</a>
+    <a href="?query=%7B%22category%22%3A%22Speakers%22%7D" class="btn btn-link">Altavoces externos</a>
+    <a href="?query=%7B%22category%22%3A%22Webcams%22%7D" class="btn btn-link">Webcams</a>
+</div>
+
+
         <div class="products row">
             {{#each productos.payload}}
             <div class="product col-md-4">
@@ -77,3 +88,5 @@
 </body>
 
 </html>
+
+
